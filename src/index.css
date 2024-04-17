@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.text-stroke-cosmic {
+  -webkit-text-stroke-width: 1px; /* Lebar stroke */
+  -webkit-text-stroke-color: white; /* Warna stroke */
+  color: #202020; 
+  
+}
+.text-stroke-wonder {
+  -webkit-text-stroke-width: 1px; /* Lebar stroke */
+  -webkit-text-stroke-color: white; /* Warna stroke */
+  color: #050505; 
+  
+}

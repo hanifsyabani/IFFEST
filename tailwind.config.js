@@ -8,6 +8,10 @@ export default {
     extend: {
       colors:{
         'primary' :'#202020'
+      },
+      fontFamily:{
+        'sans': ['Poppins'],
+        'mono': ['"Google sans"']
       }
     },
   },
