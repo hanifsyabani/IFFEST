@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       colors:{
-        'primary' :'#202020'
+        'primary' :'#1F1F1F',
+        'secondary' :'#020202'
       },
       fontFamily:{
         'sans': ['Poppins'],
