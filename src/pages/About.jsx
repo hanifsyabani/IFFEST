@@ -38,9 +38,8 @@ export default function About() {
           <div className="flex flex-wrap justify-center gap-20 lg:gap-0 items-center lg:pt-36 pt-20">
             {AboutItem.map((item) => (
               <div
-                className={`w-96 ${
-                  item.id === 3 ? "border-none" : "lg:border-r"
-                } lg:border-white text-center px-4`}
+                className={`w-96 ${item.id === 3 ? "border-none" : "lg:border-r"
+                  } lg:border-white text-center px-4`}
                 key={item.id}
               >
                 <div className="w-32 h-32 rounded-full mt-2 bg-white font-mono mx-auto"></div>
