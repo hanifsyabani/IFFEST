@@ -1,73 +1,66 @@
 import { Link } from "react-router-dom";
 import cosmicLogo from "../../assets/logo.png";
 import { itemNav } from "./ItemNav";
-import { useState } from "react";
-import { AiOutlineMenu } from "react-icons/ai";
+import { RiMenu3Fill } from "react-icons/ri";
+import { useState, useEffect } from "react";
+// import { IoMdClose } from "react-icons/io";
 
 const Navbar = () => {
-  const [nav, setNav] = useState(false);
+  const [isNavVisible, setNavVisible] = useState(false);
+  const [isNavbarFixed, setNavbarFixed] = useState(false);
 
-  const handleNav = () => {
-    setNav(!nav);
+  const toggleNavVisibility = () => {
+    setNavVisible(!isNavVisible);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const fixedNav = document.querySelector('header').offsetTop;
+      if (window.pageYOffset > fixedNav) {
+        setNavbarFixed(true);
+      } else {
+        setNavbarFixed(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // Bersihkan event listener saat komponen di-unmount
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <>
-      <nav className="lg:hidden flex justify-between  items-center py-4 fixed w-full px-3 bg-primary z-50">
-        <div></div>
-        <img
-          src={cosmicLogo}
-          alt="logo"
-          width={500}
-          height={500}
-          className="w-28"
-        />
-        <AiOutlineMenu onClick={handleNav} size={30} className="text-white cursor-pointer" />
-      </nav>
-
-      {/* mobile */}
-      <nav
-        className={`lg:hidden ${
-          nav ? "right-0" : "-right-[30rem]"
-        } bg-primary fixed top-0 pt-20 w-1/2 h-screen z-40 transition-all`}
-      >
-        <ul className="flex flex-col justify-center items-center gap-10 text-white">
-          {itemNav.map((item) => {
-            return (
-              <Link to={item.link} key={item.name}>
-                <li className="border-b border-black hover:border-b hover:border-white">
-                  {item.name}
-                </li>
-              </Link>
-            );
-          })}
-        </ul>
-      </nav>
-
-      {/* dekstop */}
-      <nav className="hidden fixed lg:block bg-transparent w-full pl-12 py-8 z-20">
-        <div className="flex items-center gap-64">
-          <img
-            src={cosmicLogo}
-            alt="logo"
-            width={500}
-            height={500}
-            className="w-32"
-          />
-          <ul className="flex items-center gap-20 text-white">
-            {itemNav.map((item) => {
-              return (
-                <Link to={item.link} key={item.name}>
-                  <li className="border-b border-black hover:border-b hover:border-white ">
-                    {item.name}
-                  </li>
-                </Link>
-              );
-            })}
-          </ul>
+    <header className={`bg-transparent absolute top-0 left-0 w-full flex items-center z-50 ${isNavbarFixed ? 'navbar-fixed' : ''}`}>
+      <div className="container">
+        <div className="flex items-center justify-between relative">
+          <div className="flex items-center px-4 py-5">
+            <img src={cosmicLogo} alt="logo" className="w-40 lg:w-48" />
+          </div>
+          <div className="flex items-center">
+            <button id="mobile-nav" className="block absolute right-4 md:hidden" onClick={toggleNavVisibility}>
+              <RiMenu3Fill size={40} className="text-white" />
+            </button>
+            <nav id="nav-menu"
+              className={`${isNavVisible ? '' : 'hidden'
+                } md:block md:static md:bg-transparent max-w-full md:shadow-none md:rounded-none absolute py-5 shadow-lg rounded-lg w-full top-full left-0 bg-primary border border-gray-300 md:border-none mr-44 lg:mr-56`}
+            >
+              <ul className="block md:flex gap-x-8 lg:gap-x-16 text-white">
+                {itemNav && Array.isArray(itemNav) && itemNav.map((item) => (
+                  <Link to={item.link} key={item.name}>
+                    <li className="flex text-xl py-2 px-8 md:px-0 hover:-translate-y-3 duration-300">
+                      {item.name}
+                    </li>
+                  </Link>
+                ))}
+              </ul>
+            </nav>
+          </div>
+          <div></div>
         </div>
-      </nav>
-    </>
+      </div>
+    </header>
   );
 };
 

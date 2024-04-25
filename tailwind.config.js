@@ -6,11 +6,15 @@ export default {
   ],
   theme: {
     extend: {
-      colors:{
-        'primary' :'#1F1F1F',
-        'secondary' :'#020202'
+      container: {
+        center: true,
+        padding: '16px',
       },
-      fontFamily:{
+      colors: {
+        'primary': '#1F1F1F',
+        'secondary': '#020202'
+      },
+      fontFamily: {
         'sans': ['Poppins'],
         'mono': ['"Google sans"']
       }
