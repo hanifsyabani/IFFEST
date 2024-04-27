@@ -11,13 +11,20 @@ import satelit2 from "../assets/satelit2.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { AboutItem } from "../components/About/AboutItem";
+import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
     <>
       <section id="hero" className="bg-black w-[100vw] h-[100vh]">
-        <img className="absolute lg:hidden w-full h-full object-cover bg-repeat z-0" src={bgMobile} />
-        <img className="hidden lg:absolute w-full h-full object-cover bg-repeat z-0" src={bg} />
+        <img
+          className="absolute lg:hidden w-full h-full object-cover bg-repeat z-0"
+          src={bgMobile}
+        />
+        <img
+          className="hidden lg:absolute w-full h-full object-cover bg-repeat z-0"
+          src={bg}
+        />
         <div className="px-[5%] h-[100vh]">
           <Navbar />
           <img
@@ -54,9 +61,7 @@ export default function Home() {
             </div>
           </div>
 
-
-
-          <div className="bg-black text-white flex items-center justify-center gap-4 lg:gap-10 z-20" >
+          <div className="bg-black text-white flex items-center justify-center gap-4 lg:gap-10 z-20">
             <div className="hidden md:flex gap-3">
               <div className="w-4 h-1 bg-white"></div>
               <div className="w-4 h-1 bg-white"></div>
@@ -64,7 +69,11 @@ export default function Home() {
               <div className="w-4 h-1 bg-white"></div>
               <div className=" w-16 lg:w-48 h-1 bg-white"></div>
             </div>
-            <button className="bg-black border-[4px] border-white px-12 py-5 lg:px-12 lg:py-8 rounded-xl cursor-pointer text-lg lg:text-3xl font-semibold tracking-wide hover:bg-white hover:text-black hover:-translate-y-3 duration-300">Start your adventure</button>
+            <Link to={"/planet"}>
+              <button className="bg-black border-[4px] border-white px-12 py-5 lg:px-12 lg:py-8 rounded-xl cursor-pointer text-lg lg:text-3xl font-semibold tracking-wide hover:bg-white hover:text-black hover:-translate-y-3 duration-300">
+                Start your adventure
+              </button>
+            </Link>
             <div className="hidden md:flex gap-3">
               <div className=" w-16 lg:w-48 h-1 bg-white"></div>
               <div className="w-4 h-1 bg-white"></div>
@@ -86,10 +95,12 @@ export default function Home() {
             className="lg:hidden absolute bottom-0 w-full"
           />
         </div>
-
       </section>
       <section id="about" className="bg-black relative my-12">
-        <img className="absolute lg:hidden h-full object-fill bg-repeat z-0" src={bgMobile} />
+        <img
+          className="absolute lg:hidden h-full object-fill bg-repeat z-0"
+          src={bgMobile}
+        />
         <img className="hidden lg:absolute" src={bg} />
         <div className="lg:px-[5%]">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 lg:gap-10 items-center lg:py-36 py-20 lg:divide-x">
@@ -98,9 +109,17 @@ export default function Home() {
                 className="flex flex-col justify-center items-center relative"
                 key={item.id}
               >
-                <img src={item.asset} className="absolute w-24 -top-6 left-0 " alt="" />
+                <img
+                  src={item.asset}
+                  className="absolute w-24 -top-6 left-0 "
+                  alt=""
+                />
                 <div className=" w-32 h-32 md:w-56 md:h-56 rounded-full mt-2 overflow-hidden border-2">
-                  <img src={item.image} alt="" className="w-full h-full object-cover" />
+                  <img
+                    src={item.image}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h1 className="font-semibold lg:text-2xl 2xl:text-3xl text-white pt-4 2xl:pt-12 text-center">
                   {item.nama}
@@ -108,15 +127,21 @@ export default function Home() {
                 <div className="pt-4 2xl:pt-8 flex flex-col  gap-4 ml-12">
                   <div className="flex gap-5 items-center">
                     <FaGithub size={30} className="text-white" />
-                    <p className="text-white lg:text-lg 2xl:text-xl">{item.github}</p>
+                    <p className="text-white lg:text-lg 2xl:text-xl">
+                      {item.github}
+                    </p>
                   </div>
                   <div className="flex gap-5 items-center">
                     <CiMail size={30} className="text-white" />
-                    <p className="text-white lg:text-lg 2xl:text-xl">{item.email}</p>
+                    <p className="text-white lg:text-lg 2xl:text-xl">
+                      {item.email}
+                    </p>
                   </div>
                   <div className="flex gap-5 items-center">
                     <FaLinkedin size={30} className="text-white" />
-                    <p className="text-white lg:text-lg 2xl:text-xl">{item.linkedin}</p>
+                    <p className="text-white lg:text-lg 2xl:text-xl">
+                      {item.linkedin}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -125,6 +150,5 @@ export default function Home() {
         </div>
       </section>
     </>
-
   );
 }

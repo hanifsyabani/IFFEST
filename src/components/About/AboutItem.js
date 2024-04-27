@@ -1,37 +1,37 @@
 import rihan from "../../assets/rihan.jpg"
 import fiqri from "../../assets/fiqri.jpg"
 import hanif from "../../assets/hanif.jpg"
-import rocket from '../../assets/emojione_rocket.png';
-import satelit1 from "../../assets/satelit1.png"
-import satelit2 from "../../assets/satelit2.png"
-
 
 export const AboutItem = [
   {
     id: 1,
     nama: "Muhammad Hanif Sya'bani",
     github: "hanifsyabani",
+    linkGit: "https://github.com/hanifsyabani",
     email: "mh070940@gmail.com",
     linkedin: "Muhammad Hanif Sya'bani",
+    linkLinked : 'https://www.linkedin.com/in/muhammad-hanif-sya-bani/',
     image: hanif,
-    asset: satelit1,
+
   },
   {
     id: 2,
     nama: "Rihan Naufaldihanif",
     github: "rihannh",
+    linkGit: "https://github.com/rihannh",
     email: "rihannaufal22@gmail.com",
     linkedin: "Rihan Naufaldihanif",
+    linkLinked : 'https://www.linkedin.com/in/rihan-naufaldihanif/',
     image: rihan,
-    asset: rocket,
   },
   {
     id: 3,
     nama: "Rizalul Fiqri",
     github: "TheSwordSlay",
+    linkGit: "https://github.com/TheSwordSlay",
     email: "fiqrijambi@gmail.com",
     linkedin: "Rizalul Fiqri",
+    linkLinked : 'https://www.linkedin.com/in/rizalulfiqri/',
     image: fiqri,
-    asset: satelit2,
   }
 ]

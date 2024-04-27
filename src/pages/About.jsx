@@ -43,7 +43,11 @@ export default function About() {
                 key={item.id}
               >
                 <div className="w-56 h-56 rounded-full mt-2 overflow-hidden border-2">
-                  <img src={item.image} alt="" className="w-full h-full object-cover" />
+                  <img
+                    src={item.image}
+                    alt=""
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <h1 className="font-semibold lg:text-2xl 2xl:text-3xl text-white pt-8 2xl:pt-12 text-center">
                   {item.nama}
@@ -51,15 +55,25 @@ export default function About() {
                 <div className="pt-4 2xl:pt-8 flex flex-col  gap-4 ml-12">
                   <div className="flex gap-5 items-center">
                     <FaGithub size={30} className="text-white" />
-                    <p className="text-white lg:text-lg 2xl:text-xl">{item.github}</p>
+                    <a href={item.linkGit}>
+                      <p className="text-white lg:text-lg 2xl:text-xl hover:underline">
+                        {item.github}
+                      </p>
+                    </a>
                   </div>
                   <div className="flex gap-5 items-center">
                     <CiMail size={30} className="text-white" />
-                    <p className="text-white lg:text-lg 2xl:text-xl">{item.email}</p>
+                    <p className="text-white lg:text-lg 2xl:text-xl">
+                      {item.email}
+                    </p>
                   </div>
                   <div className="flex gap-5 items-center">
                     <FaLinkedin size={30} className="text-white" />
-                    <p className="text-white lg:text-lg 2xl:text-xl">{item.linkedin}</p>
+                    <a href={item.linkLinked}>
+                      <p className="text-white lg:text-lg 2xl:text-xl hover:underline">
+                        {item.linkedin}
+                      </p>
+                    </a>
                   </div>
                 </div>
               </div>
