@@ -6,8 +6,6 @@ import rocket from '../assets/emojione_rocket.png';
 import meteor from "../assets/meteor.png";
 import bumi from "../assets/bumi.png";
 import rocketmobile from "../assets/roketmobile.png";
-import satelit1 from "../assets/satelit1.png";
-import satelit2 from "../assets/satelit2.png";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { CiMail } from "react-icons/ci";
 import { AboutItem } from "../components/About/AboutItem";
