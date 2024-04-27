@@ -17,16 +17,16 @@ export default function Planet() {
                 <h1 className="text-white absolute top-4 lg:text-xl text-lg left-8 lg:left-1/2 lg:-translate-x-1/2 font-bold ">
                   - {planet.name} -
                 </h1>
-                <div className="lg:w-44 w-24">
+                <div className="lg:h-44 h-24 z-0">
                   <img
                     src={planet.image}
                     alt={planet.name}
-                    className="w-full h-full object-cover planet"
+                    className="w-full h-full object-contain planet"
                   />
                 </div>
               </div>
               <Link to={`/detail/${planet.id}`}>
-                <button className="font-bold bg-white p-2 lg:w-52 w-28 rounded-full absolute bottom-6 lg:left-1/2 lg:-translate-x-1/2 left-5 hover:bg-primary hover:text-white transition-all text-sm lg:text-base ">
+                <button className="font-bold bg-white p-2 lg:w-52 w-28 rounded-full absolute bottom-6 lg:left-1/2 lg:-translate-x-1/2 left-5 hover:bg-primary hover:text-white transition-all text-sm lg:text-base z-10">
                   View Detail
                 </button>
               </Link>
