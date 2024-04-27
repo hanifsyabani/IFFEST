@@ -88,7 +88,7 @@ export default function Home() {
         </div>
 
       </section>
-      <section id="about" className="bg-black relative my-12">
+      <section id="about" className="bg-black relative mt-12">
         <img className="absolute lg:hidden h-full object-fill bg-repeat z-0" src={bgMobile} />
         <img className="hidden lg:absolute" src={bg} />
         <div className="lg:px-[5%]">

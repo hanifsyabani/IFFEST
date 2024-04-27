@@ -34,18 +34,17 @@ export default function Planet() {
 
         {/* Planet */}
         <div className="text-white">
-          <img src={secondSaturn} alt="Saturn" className="mx-auto py-32" />
-          <div className="hidden lg:block">
-            <div className="absolute top-1/3 left-1/4 -translate-x-[50%] 2xl:-translate-x-[40%] space-y-3">
+          <img src={secondSaturn} alt="Saturn" className="mx-auto pt-12 pb-24" />
+          <div id="detailPlanet" className="hidden lg:block">
+            <div className="absolute top-1/2 -translate-y-[220%] left-1/4 -translate-x-[60%] 2xl:-translate-x-[40%] space-y-3">
               <h3 className="text-2xl max-w-[20rem]">The 6th closest planet to the sun</h3>
               <div className="">
                 <div className="relative flex">
                   <div className="border-[3px] w-14 md:w-52 lg:w-80 2xl:w-80 relative before:absolute before:-right-1 before:top-1/2 before:-translate-y-1/2 before:h-4 before:w-4 before:bg-white before:rounded-full"></div>
                 </div>
               </div>
-
             </div>
-            <div className="absolute top-1/3 -translate-y-[80%]  right-0 -translate-x-[110%] 2xl:-translate-x-[180%] space-y-3">
+            <div className="absolute top-1/2 -translate-y-[320%]  right-0 -translate-x-[100%] 2xl:-translate-x-[180%] space-y-3">
               <h3 className="text-2xl max-w-[20rem] pl-20">Has 47 Moons</h3>
               <div>
                 <div className="relative flex">
@@ -54,7 +53,7 @@ export default function Planet() {
                 </div>
               </div>
             </div>
-            <div className="absolute bottom-1/3 translate-y-[120%] 2xl:translate-y-[65%]  right-0 -translate-x-[20%] 2xl:-translate-x-[60%] space-y-3">
+            <div className="absolute bottom-1/2 translate-y-[150%] 2xl:translate-y-[65%]  right-0 -translate-x-[20%] 2xl:-translate-x-[60%] space-y-3">
               <div className="">
                 <div className="relative flex">
                   <div className="border-[3px] w-20 rotate-45 mb-7 relative before:absolute before:-left-2 before:bottom-1/2 before:translate-y-1/2 before:h-4 before:w-4 before:rounded-full before:bg-white"></div>
@@ -64,8 +63,7 @@ export default function Planet() {
               <h3 className="text-2xl max-w-[21rem] ml-16">Planet with the largest asteroids rings on our solar system</h3>
             </div>
           </div>
-
-          <div className="block lg:hidden py-12 px-16  ">
+          <div id="mobileDetailPlanet" className="block lg:hidden py-12 px-16">
             <div className="space-y-6 relative before:absolute before:-left-8 before:w-1 before:h-full before:rounded-md before:bg-white">
               <h3 className="text-lg md:text-2xl relative before:absolute before:w-4 before:h-4 before:bg-white before:top-0 before:-left-[38px] before:rounded-full">The 6th closest planet to the sun</h3>
               <div className="flex gap-4">
@@ -125,12 +123,11 @@ export default function Planet() {
                 <div className="border border-white h-10"></div>
               </div>
             </div>
-
           </div>
         </div>
 
         {/* footer */}
-        <div className="flex justify-evenly">
+        <div className="flex justify-evenly pt-10">
           <button className="btn">Previous page</button>
           <button className="btn">Previous page</button>
           <button className="btn">Previous page</button>
