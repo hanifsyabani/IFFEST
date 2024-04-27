@@ -140,7 +140,7 @@ export default function Detail() {
           </div>
 
           <Link to={"/planet"} >
-            <button className="bg-white w-24 rounded-full px-1 py-2 mt-4 font-semibold lg:ml-0 ml-4 hover:bg-white/90 transition-all">
+            <button className="bg-white w-24 rounded-full px-1 py-2 mt-4 font-semibold lg:ml-0 ml-4 hover:bg-white/90 transition-all mb-3">
               Back
             </button>
           </Link>

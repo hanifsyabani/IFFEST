@@ -21,8 +21,8 @@ export const PlanetItem = [
     id:2,
     name: "Venus",
     image: venus,
-    info1 :"Rotates in the opposite direction to the majority of the other planets in the solar system",
-    info2: "The surface of Venus is littered with volcanoes and volcanic plateaus.",
+    info1 :"Venus rotates in the opposite direction to most other planets",
+    info2: "Has a thick atmosphere",
     info3: "The hottest planet in the solar system (900F =  465C)",
   },
   {
@@ -38,7 +38,7 @@ export const PlanetItem = [
     name: "Mars",
     image:  mars,
     info1 :"Famous for its reddish hue, comes from iron oxide covering its surface.",
-    info2: "Mars boasts the tallest volcano in the solar system",
+    info2: "Boasts the tallest volcano",
     info3: "Has a very thin atmosphere consisting mainly of carbon dioxide.",
   },
   {
@@ -46,7 +46,7 @@ export const PlanetItem = [
     name: "Jupiter",
     image:  jupiter,
     info1 :"Has a strong magnetic field and produces auroras at its poles.",
-    info2: "The Great Red Spot, a giant storm that lasts for centuries.",
+    info2: "A giant storm, The Great Red Spot",
     info3: "The largest planet in the solar system, bigger than all the other planets combined.",
   },
   {
@@ -62,7 +62,7 @@ export const PlanetItem = [
     name: "Uranus",
     image: uranus,
     info1 :"Surrounded by 13 faint rings and 28 small moons",
-    info2: "Uranus has a system of faint rings",
+    info2: "Has a system of faint rings",
     info3: "The planet's atmosphere make pale blue-green hue",
   },
   {
