@@ -4,7 +4,7 @@ import earth from '../../assets/earth.png';
 import mars from '../../assets/mars.png';
 import jupiter from '../../assets/jupyter.png';
 import saturn from '../../assets/saturn-2.png';
-import uranus from '../../assets/neptune.png';
+import uranus from '../../assets/uranus.png';
 import neptune from '../../assets/neptune.png';
 
 
