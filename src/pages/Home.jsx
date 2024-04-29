@@ -94,59 +94,7 @@ export default function Home() {
           />
         </div>
       </section>
-      <section id="about" className="bg-black relative my-12">
-        <img
-          className="absolute lg:hidden h-full object-fill bg-repeat z-0"
-          src={bgMobile}
-        />
-        <img className="hidden lg:absolute" src={bg} />
-        <div className="lg:px-[5%]">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20 lg:gap-10 items-center lg:py-36 py-20 lg:divide-x">
-            {AboutItem.map((item) => (
-              <div
-                className="flex flex-col justify-center items-center relative"
-                key={item.id}
-              >
-                <img
-                  src={item.asset}
-                  className="absolute w-24 -top-6 left-0 "
-                  alt=""
-                />
-                <div className=" w-32 h-32 md:w-56 md:h-56 rounded-full mt-2 overflow-hidden border-2">
-                  <img
-                    src={item.image}
-                    alt=""
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h1 className="font-semibold lg:text-2xl 2xl:text-3xl text-white pt-4 2xl:pt-12 text-center">
-                  {item.nama}
-                </h1>
-                <div className="pt-4 2xl:pt-8 flex flex-col  gap-4 ml-12">
-                  <div className="flex gap-5 items-center">
-                    <FaGithub size={30} className="text-white" />
-                    <p className="text-white lg:text-lg 2xl:text-xl">
-                      {item.github}
-                    </p>
-                  </div>
-                  <div className="flex gap-5 items-center">
-                    <CiMail size={30} className="text-white" />
-                    <p className="text-white lg:text-lg 2xl:text-xl">
-                      {item.email}
-                    </p>
-                  </div>
-                  <div className="flex gap-5 items-center">
-                    <FaLinkedin size={30} className="text-white" />
-                    <p className="text-white lg:text-lg 2xl:text-xl">
-                      {item.linkedin}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
     </>
   );
 }

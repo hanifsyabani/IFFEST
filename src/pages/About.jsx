@@ -11,7 +11,7 @@ import satelit2 from "../assets/satelit2.png";
 export default function About() {
   return (
     <>
-      <div className="bg-gradient-to-b lg:px-[3%] from-primary lg:h-screen to-secondary relative ">
+      <div className="bg-gradient-to-b lg:px-[3%] from-primary lg:h-screen to-secondary relative lg:overflow-y-hidden ">
         <Navbar />
         <div
           className="lg:bg-cover bg-center w-full h-full"
